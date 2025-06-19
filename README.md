@@ -4,6 +4,10 @@
 
 AfterLife-Protocol is a revolutionary blockchain-based solution that enables secure, transparent, and automated digital inheritance of cryptocurrency assets. Built on Ethereum, it allows users to create digital wills, designate beneficiaries, and ensure their crypto assets are distributed according to their wishes after periods of inactivity.
 
+## Live Demo
+
+[Access the AfterLife-Protocol platform](https://afterlife-protocol.vercel.app/) (Deployed on Vercel — works with the Sepolia testnet)
+
 ## 🌟 Key Features
 
 - **Digital Will Creation**: Deposit ETH and create comprehensive digital wills
