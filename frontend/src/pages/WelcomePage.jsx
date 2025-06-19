@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import toast from "react-hot-toast";
 import WalletConnectModal from "../components/modals/WalletConnectModal";
 import LoadingScreen from "../components/LoadingScreen";
+import { FaGithub, FaTwitter } from "react-icons/fa";
 
 const WelcomePage = ({ onConnect }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -62,7 +63,6 @@ const WelcomePage = ({ onConnect }) => {
           </div>
         </div>
       </div>
-
       {/* Features Section */}
       <div className="bg-background-light py-16">
         <div className="max-w-6xl mx-auto px-4">
@@ -88,12 +88,58 @@ const WelcomePage = ({ onConnect }) => {
           </div>
         </div>
       </div>
-
       {/* Wallet Connect Modal */}
       <WalletConnectModal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
       />
+      {/* Footer Section */}
+      <footer className="relative bg-gradient-to-r from-background via-background-light to-background border-t border-gray-700/30">
+        <div className="absolute inset-0 bg-gradient-to-t from-background-dark/20 to-transparent"></div>
+        <div className="relative max-w-6xl mx-auto px-6 py-8">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
+            {/* Brand & Copyright */}
+            <div className="text-center md:text-left">
+              <div className="flex items-center justify-center md:justify-start space-x-2 mb-2">
+                <span className="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                  AfterLife Protocol
+                </span>
+              </div>
+              <p className="text-sm text-gray-400">
+                © {new Date().getFullYear()} All rights reserved. Securing
+                digital legacies.
+              </p>
+            </div>
+
+            {/* Social Links */}
+            <div className="flex items-center space-x-4">
+              <span className="text-sm text-gray-400 hidden md:block">
+                Connect with us
+              </span>
+              <div className="flex space-x-4">
+                <a
+                  href="https://github.com/jai123singh/AfterLife-Protocol"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center justify-center w-12 h-12 bg-gray-800/50 hover:bg-primary/20 rounded-full transition-all duration-300 transform hover:scale-110 border border-gray-700/30 hover:border-primary/50"
+                  aria-label="GitHub"
+                >
+                  <FaGithub className="text-xl text-gray-400 group-hover:text-primary transition-colors duration-300" />
+                </a>
+                <a
+                  href="https://x.com/JaiSingh9122"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center justify-center w-12 h-12 bg-gray-800/50 hover:bg-secondary/20 rounded-full transition-all duration-300 transform hover:scale-110 border border-gray-700/30 hover:border-secondary/50"
+                  aria-label="Twitter"
+                >
+                  <FaTwitter className="text-xl text-gray-400 group-hover:text-secondary transition-colors duration-300" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };
